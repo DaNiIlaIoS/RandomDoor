@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
 
+    private var coordinator: AppCoordinator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        coordinator = AppCoordinator(controller: self)
+        
+        coordinator.setEnvironment()
     }
-
-
 }
 
